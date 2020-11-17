@@ -1,4 +1,3 @@
-
 pub trait HasArea {
     type Output;
     fn get_area(&self) -> Self::Output;
@@ -29,7 +28,7 @@ impl<T: std::ops::Mul<Output = T> + Into<f64> + Copy> HasArea for Circle<T> {
     type Output = f64;
 
     fn get_area(&self) -> Self::Output {
-       (self.radius * self.radius).into() * std::f64::consts::PI;
+       (self.radius * self.radius).into() * std::f64::consts::PI
     }
 }
 
@@ -37,7 +36,7 @@ impl<T: std::ops::Mul<Output = T> + Into<f64> + Copy> HasArea for Triangle<T> {
     type Output = f64;
 
     fn get_area(&self) -> Self::Output {
-        (self.base * self.hight).into() * 0.5;
+        (self.base * self.hight).into() * 0.5
     }
 }
 

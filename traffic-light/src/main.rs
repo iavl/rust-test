@@ -1,3 +1,4 @@
+#[derive(Debug)]
 enum TrafficLight {
     Red,
     Green,
@@ -16,4 +17,14 @@ impl Light for TrafficLight {
             TrafficLight::Yellow=> 5,
         }
     }
+}
+
+fn main() {
+    let red = TrafficLight::Red;
+    let green = TrafficLight::Green;
+    let yellow = TrafficLight::Yellow;
+
+    println!("traffic light is {:?}, {:?} seconds", red, red.time());
+    println!("traffic light is {:?}, {:?} seconds", green, green.time());
+    println!("traffic light is {:?}, {:?} seconds", yellow, yellow.time());
 }
